@@ -2,6 +2,7 @@
 name = "yew-os"
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/11reed/yew-os"
 description = "A hook to detect and display OS with Yew"
 license = "MIT"
 
