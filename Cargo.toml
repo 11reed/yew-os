@@ -1,0 +1,10 @@
+[package]
+name = "yew-os"
+version = "0.1.0"
+edition = "2021"
+description = "A hook to detect and display OS with Yew"
+license = "MIT"
+
+[dependencies]
+yew = { version = "0.20.0", features = ["csr"] }
+web-sys = { version = "0.3.61", features = ["Navigator", "Window"] }
