@@ -1,6 +1,6 @@
 [package]
 name = "yew-os"
-version = "0.1.1"
+version = "0.2.1"
 edition = "2021"
 repository = "https://github.com/11reed/yew-os"
 description = "Yew hooks for user agents"
