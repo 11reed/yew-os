@@ -1,7 +1,6 @@
 use yew::prelude::*;
-use web_sys::{Navigator, window};
 
-/// Detect and display OS
+/// Detect OS
 ///
 /// # Example
 /// 
@@ -13,7 +12,6 @@ use web_sys::{Navigator, window};
 /// fn my_component() -> Html {
 ///     let os = use_os();
 /// 
-///     
 ///     html! {
 ///         <div>{os}</div>
 ///     }
@@ -32,20 +30,21 @@ pub fn use_os() -> String {
                 .navigator()
                 .user_agent()
                 .unwrap();
+            
             if user_agent.contains("Mac") && !user_agent.contains("iPhone") && !user_agent.contains("iPad") {
-                os.set("mac".to_string());
+                os.set("Mac".to_string());
 
             } else if user_agent.contains("Windows") {
-                os.set("windows".to_string());
+                os.set("Windows".to_string());
 
             } else if user_agent.contains("Fedora") {
-                os.set("fedora".to_string());
+                os.set("Fedora".to_string());
 
             } else if user_agent.contains("Ubuntu") {
-                os.set("ubuntu".to_string());
+                os.set("Ubuntu".to_string());
 
             } else if user_agent.contains("Linux") {
-                os.set("linux".to_string());
+                os.set("Linux".to_string());
             }
             || {}
         }
