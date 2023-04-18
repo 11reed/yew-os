@@ -1,5 +1,27 @@
 use yew::prelude::*;
 
+/// Custom user-agent string
+///
+/// # Example
+/// 
+/// ```rust
+/// let config = UaConfig {
+///     custom_ua: "Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11".to_string(),
+/// };
+/// ```
+
+pub struct UaConfig {
+    pub custom_ua: String,
+}
+
+impl Default for UaConfig {
+    fn default() -> Self {
+        Self {
+            custom_ua: "".to_string(),
+        }
+    }
+}
+
 /// Detect browser
 ///
 /// # Example
@@ -29,18 +51,6 @@ use yew::prelude::*;
 ///     }
 /// }
 /// ```
-
-pub struct UaConfig {
-    pub custom_ua: String,
-}
-
-impl Default for UaConfig {
-    fn default() -> Self {
-        Self {
-            custom_ua: "".to_string(),
-        }
-    }
-}
 
 #[hook]
 pub fn use_browser(config: Option<UaConfig>) -> String {
